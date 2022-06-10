@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import AuthLayout from "./AuthLayout";
 import { FONTS, SIZES, COLORS, icons } from "../../constants";
-import { FormInp, TextButton } from "../../components";
+import { FormInp, TextButtonSignScreen } from "../../components";
 import { utils } from "../../utils";
 
 const ForgotPassword = ({ navigation }) => {
@@ -53,8 +53,8 @@ const ForgotPassword = ({ navigation }) => {
       />
 
       {/* Button */}
-      <View style={{ flex: 1, justifyContent: "flex-end" }}>
-        <TextButton
+      <View style={{ flex: 1 }}>
+        <TextButtonSignScreen
           label="Send Email"
           disabled={isEnableSendEmail() ? false : true}
           buttonContainerStyle={{
@@ -64,7 +64,7 @@ const ForgotPassword = ({ navigation }) => {
             borderRadius: SIZES.radius,
             backgroundColor: isEnableSendEmail()
               ? COLORS.primary
-              : COLORS.transparentPrimary,
+              : COLORS.transparentPrimray,
           }}
           onPress={() => navigation.goBack()}
         />

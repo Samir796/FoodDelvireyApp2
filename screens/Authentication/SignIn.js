@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import AuthLayout from "./AuthLayout";
 import { COLORS, FONTS, SIZES, icons } from "../../constants";
 import {
   CustomSwitch,
   FormInp,
-  TextButton,
-  TextIconButton,
+  TextButtonSignScreen,
+  TextIconButtonSign,
 } from "../../components";
 import { utils } from "../../utils";
 
@@ -89,7 +89,7 @@ const SignIn = ({ navigation }) => {
           }}
         >
           <CustomSwitch value={saveMe} onChange={(value) => setSaveMe(value)} />
-          <TextButton
+          <TextButtonSignScreen
             label="Forgot Password"
             buttonContainerStyle={{ backgroundColor: null }}
             labelStyle={{
@@ -100,7 +100,7 @@ const SignIn = ({ navigation }) => {
           />
         </View>
         {/* Sign In */}
-        <TextButton
+        <TextButtonSignScreen
           label="Sign In"
           disabled={isEnableSignIn() ? false : true}
           buttonContainerStyle={{
@@ -110,8 +110,9 @@ const SignIn = ({ navigation }) => {
             borderRadius: SIZES.radius,
             backgroundColor: isEnableSignIn()
               ? COLORS.primary
-              : COLORS.transparentPrimary,
+              : COLORS.transparentPrimray,
           }}
+          onPress={() => navigation.navigate("Home")}
         />
         {/* Sign Up */}
         <View
@@ -125,7 +126,7 @@ const SignIn = ({ navigation }) => {
           <Text style={{ color: COLORS.darkGray, ...FONTS.body3 }}>
             Don't have an account?
           </Text>
-          <TextButton
+          <TextButtonSignScreen
             label="Sign Up"
             buttonContainerStyle={{ backgroundColor: null }}
             labelStyle={{ color: COLORS.primary, ...FONTS.h3 }}
@@ -134,9 +135,9 @@ const SignIn = ({ navigation }) => {
         </View>
       </View>
       {/* Footer */}
-      <View>
+      <View style={{ marginTop: 30 }}>
         {/* Facebook */}
-        <TextIconButton
+        <TextIconButtonSign
           containerStyle={{
             height: 50,
             alignItems: "center",
@@ -151,7 +152,7 @@ const SignIn = ({ navigation }) => {
           onPress={() => console.log("FB")}
         />
         {/* Google */}
-        <TextIconButton
+        <TextIconButtonSign
           containerStyle={{
             height: 50,
             alignItems: "center",

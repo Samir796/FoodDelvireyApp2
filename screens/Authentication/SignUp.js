@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { AuthLayout } from "../";
 import { FONTS, SIZES, COLORS, icons } from "../../constants";
-import { TextButton, TextIconButton, FormInp } from "../../components";
+import {
+  TextButtonSignScreen,
+  TextIconButtonSign,
+  FormInp,
+} from "../../components";
 import { utils } from "../../utils";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
@@ -117,7 +121,7 @@ const SignUp = ({ navigation }) => {
           }
         />
         {/* Sign Up and Sign in */}
-        <TextButton
+        <TextButtonSignScreen
           label="Sign Up"
           disabled={isEnableSignUp() ? false : true}
           buttonContainerStyle={{
@@ -127,7 +131,7 @@ const SignUp = ({ navigation }) => {
             borderRadius: SIZES.radius,
             backgroundColor: isEnableSignUp()
               ? COLORS.primary
-              : COLORS.transparentPrimary,
+              : COLORS.transparentPrimray,
           }}
           onPress={() => navigation.navigate("Otp")}
         />
@@ -141,7 +145,7 @@ const SignUp = ({ navigation }) => {
           <Text style={{ color: COLORS.darkGray, ...FONTS.body3 }}>
             Already have an account ?
           </Text>
-          <TextButton
+          <TextButtonSignScreen
             label="Sign In"
             buttonContainerStyle={{ backgroundColor: null }}
             labelStyle={{ color: COLORS.primary, ...FONTS.h3 }}
@@ -150,9 +154,9 @@ const SignUp = ({ navigation }) => {
         </View>
       </View>
       {/* Footer */}
-      <View>
+      <View style={{ marginTop: 30 }}>
         {/* Facebook */}
-        <TextIconButton
+        <TextIconButtonSign
           containerStyle={{
             height: 50,
             alignItems: "center",
@@ -167,7 +171,7 @@ const SignUp = ({ navigation }) => {
           onPress={() => console.log("FB")}
         />
         {/* Google */}
-        <TextIconButton
+        <TextIconButtonSign
           containerStyle={{
             height: 50,
             alignItems: "center",

@@ -1,10 +1,14 @@
+const apple = require("../assets/icons/apple.png");
+const back = require("../assets/icons/back.png");
 const coupon = require("../assets/icons/coupon.png");
 const cross = require("../assets/icons/cross.png");
 const cart = require("../assets/icons/cart.png");
 const menu = require("../assets/icons/menu.png");
+const minus = require("../assets/icons/minus.png");
 const search = require("../assets/icons/search.png");
 const filter = require("../assets/icons/filter.png");
 const down_arrow = require("../assets/icons/down_arrow.png");
+const delete_icon = require("../assets/icons/delete.png");
 const eye = require("../assets/icons/eye.png");
 const eye_close = require("../assets/icons/eye_close.png");
 const favourite = require("../assets/icons/favourite.png");
@@ -12,6 +16,8 @@ const fb = require("../assets/icons/fb.png");
 const google = require("../assets/icons/google.png");
 const burger = require("../assets/icons/burger.png");
 const cherry = require("../assets/icons/cherry.png");
+const check_off = require("../assets/icons/check_off.png");
+const check_on = require("../assets/icons/check_on.png");
 const correct = require("../assets/icons/correct.png");
 const cancel = require("../assets/icons/error.png");
 const rice = require("../assets/icons/rice.png");
@@ -22,6 +28,7 @@ const location = require("../assets/icons/location.png");
 const logout = require("../assets/icons/logout.png");
 const notification = require("../assets/icons/notification.png");
 const profile = require("../assets/icons/profile.png");
+const plus = require("../assets/icons/plus.png");
 const setting = require("../assets/icons/setting.png");
 const star = require("../assets/icons/star.png");
 const wallet = require("../assets/icons/wallet.png");
@@ -35,6 +42,7 @@ export default {
   search,
   filter,
   down_arrow,
+  delete_icon,
   eye,
   eye_close,
   favourite,
@@ -42,6 +50,8 @@ export default {
   google,
   burger,
   cherry,
+  check_on,
+  check_off,
   correct,
   cancel,
   rice,
@@ -56,4 +66,8 @@ export default {
   star,
   wallet,
   help,
+  minus,
+  plus,
+  apple,
+  back,
 };

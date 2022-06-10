@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { View, Text, ImageBackground, Image, Animated } from "react-native";
 import { constants, images, SIZES, FONTS, COLORS } from "../../constants";
-import { TextButton } from "../../components";
+import { TextButtonSignScreen } from "../../components";
 
 const OnBoarding = ({ navigation }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -97,7 +97,7 @@ const OnBoarding = ({ navigation }) => {
               marginVertical: SIZES.padding,
             }}
           >
-            <TextButton
+            <TextButtonSignScreen
               label="Skip"
               buttonContainerStyle={{ backgroundColor: null }}
               labelStyle={{
@@ -105,7 +105,7 @@ const OnBoarding = ({ navigation }) => {
               }}
               onPress={() => navigation.replace("SignIn")}
             />
-            <TextButton
+            <TextButtonSignScreen
               label="Next"
               buttonContainerStyle={{
                 height: 60,
@@ -129,7 +129,7 @@ const OnBoarding = ({ navigation }) => {
               marginVertical: SIZES.padding,
             }}
           >
-            <TextButton
+            <TextButtonSignScreen
               label="Let's Get Started"
               buttonContainerStyle={{
                 height: 60,

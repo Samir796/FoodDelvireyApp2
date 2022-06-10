@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
 import { FONTS, SIZES, COLORS } from "../../constants";
-import { TextButton } from "../../components";
+import { TextButtonSignScreen } from "../../components";
 import AuthLayout from "./AuthLayout";
 import OTPinputView from "@twotalltotems/react-native-otp-input";
 
@@ -53,7 +53,7 @@ const Otp = ({ navigation }) => {
           <Text style={{ color: COLORS.darkGray, ...FONTS.body3 }}>
             Didn't receive code?
           </Text>
-          <TextButton
+          <TextButtonSignScreen
             label={`Resende (${timer}s)`}
             disabled={timer == 0 ? false : true}
             buttonContainerStyle={{
@@ -67,7 +67,7 @@ const Otp = ({ navigation }) => {
       </View>
       {/* Footer */}
       <View>
-        <TextButton
+        <TextButtonSignScreen
           label="Continue"
           buttonContainerStyle={{
             height: 50,
@@ -75,13 +75,13 @@ const Otp = ({ navigation }) => {
             borderRadius: SIZES.radius,
             backgroundColor: COLORS.primary,
           }}
-          onPress={() => console.log("COntinue")}
+          onPress={() => console.log("Continue")}
         />
         <View style={{ marginTop: SIZES.padding, alignItems: "center" }}>
           <Text style={{ color: COLORS.darkGray, ...FONTS.body3 }}>
             By signing up, you agree to our.
           </Text>
-          <TextButton
+          <TextButtonSignScreen
             label="Terms and Conditions"
             buttonContainerStyle={{ backgroundColor: null }}
             labelStyle={{ color: COLORS.primary, ...FONTS.badoy3 }}

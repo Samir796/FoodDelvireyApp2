@@ -1,11 +1,11 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import React from "react";
 import { COLORS, SIZES, FONTS, images } from "../../constants";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const AuthLayout = ({ title, subtitle, titleContainerStyle, children }) => {
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         paddingVertical: SIZES.padding,
@@ -44,7 +44,7 @@ const AuthLayout = ({ title, subtitle, titleContainerStyle, children }) => {
         {/* Content / Children */}
         {children}
       </KeyboardAwareScrollView>
-    </View>
+    </ScrollView>
   );
 };
 
