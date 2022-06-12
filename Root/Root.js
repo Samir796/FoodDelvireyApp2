@@ -28,7 +28,7 @@ const Root = ({}) => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"Home"}
+        initialRouteName={"MyCard"}
       >
         <Screen name="OnBoarding" component={OnBoarding} />
         <Screen name="SignIn" component={SignIn} />
@@ -39,6 +39,7 @@ const Root = ({}) => {
         <Screen name="FoodDetail" component={FoodDetail} />
         <Screen name="MyCart" component={MyCart} />
         <Screen name="MyCard" component={MyCard} />
+        <Screen name="AddCard" component={AddCard} />
         {/* <Screen name="Checkout" component={Checkout} />
       
       <Screen name="Success" component={Success} />

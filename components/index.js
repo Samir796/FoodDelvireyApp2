@@ -17,6 +17,9 @@ import Rating from "./Rating";
 import StepperInput from "./StepperInput";
 import FooterTotal from "./FooterTotal";
 import CardItem from "./CardItem";
+import FormInput from "./FormInput";
+import FormInputCheck from "./FormInputCheck";
+import RadioButton from "./RadioButton";
 
 export {
   Header,
@@ -28,6 +31,9 @@ export {
   TwoPointSlider,
   TextButtonSignScreen,
   FormInp,
+  FormInput,
+  FormInputCheck,
+  RadioButton,
   CustomSwitch,
   TextIconButtonSign,
   IconButton,
